@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black !important;
+  color: white !important;
+  font-family: "Roboto", sans-serif !important;
+}
+p {
+  font-size: 15px !important;
+}
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../static/pexels-janko-ferlic-590493.jpg);
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+.container .top-books {
+  background-color: black !important;
+}
+.container h3 {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+.no-result {
+  margin-bottom: 5rem;
+}
+.container {
+  padding: 2rem 0 5rem 0;
+  background-color: rgba(29, 28, 28, 0.2) !important;
+}
+.container h2 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.movie-info {
+  padding-bottom: 0;
+  margin-top: 1rem;
+}
+.movie-info img {
+  margin-left: 1rem;
+  padding-bottom: 20px;
+  margin-top: 1.5rem;
+  width: 150px;
+  height: 250px;
+}
+.movie-info p {
+  padding-left: 5px;
+  margin-top: 15px;
+  gap: normal;
+}
+.col-8 {
+  padding: 0 10px;
+}
+.card {
+  position: relative;
+  min-width: 300px;
+  height: auto;
+  overflow: hidden;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  background-color: rgba(63, 62, 62, 0.2) !important;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+.card-img-top {
+  width: 100px;
+  height: 200px;
+  object-fit: fill;
+}
+.card-title {
+  text-align: center;
+  color: white;
+  margin: 0px !important;
+  font-size: 15px;
+}
+.card {
+  margin: 0;
+  padding: 0;
+}
+.col {
+  justify-content: center;
+  padding: 35px !important;
+}
+.col a {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .col {
+    justify-content: center;
+    padding: 15px !important;
+    margin: 0px !important;
+  }
+  .movie-info img {
+    margin-left: 5.5rem;
+  }
+  .movie-info p {
+    margin-left: 5rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .col {
+    justify-content: center;
+    padding: 45px !important;
+    margin: 0px -40px 0px 30px !important;
+  }
+  .movie-info img {
+    margin-left: 9rem;
+    justify-content: center;
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .card-title {
+    font-size: 12px !important;
+  }
+  .col {
+    justify-content: center;
+    align-items: center;
+  }
+  .movie-info p {
+    padding-left: 19px;
+    margin-top: 20px;
+    gap: normal;
+    font-size: 12px !important;
+  }
+  .movie-info img {
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    margin-top: 2.8125rem;
+    width: 100px;
+    height: 175px;
+  }
+  .card-img-top {
+    width: 75px;
+    height: 150px;
+    object-fit: fill;
+  }
+}
+.book-container {
+  background-color: rgba(63, 62, 62, 0.2) !important;
+}
+.pagination {
+  margin: -7rem 2rem 5rem 2rem;
+}
+.pagination > .page-item > .page-link {
+  background-color: rgba(63, 62, 62, 0.2) !important;
+  color: #ffffff;
+  border-color: rgb(99, 94, 94) !important;
+}
+
+.pagination > li > .page-link:focus,
+.pagination > li > .page-link:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+  color: #5a5a5a;
+  background-color: #eee;
+  border-color: #ddd;
+}
+.fa-book {
+  padding: 3rem 3rem;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: white;
+}
+.fa-book:hover {
+  color: rgb(138, 129, 129);
+}
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 20px;
+}
