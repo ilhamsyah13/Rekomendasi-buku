@@ -102,14 +102,13 @@ def main():
             name = final_book.loc[final_book['original_title'] == book_name, 'original_title'].values[0]
             authors = final_book.loc[final_book['original_title'] == book_name, 'authors'].values[0]
             rating = final_book.loc[final_book['original_title'] == book_name, 'average_rating'].values[0]
-            isbn = final_book.loc[final_book['original_title'] == book_name, 'isbn'].values[0]
             year = final_book.loc[final_book['original_title'] == book_name, 'original_publication_year'].values[0]
             image = final_book.loc[final_book['original_title'] == book_name, 'image_url'].values[0]
             images = []
             for i in range(len(result_final)):
                 names.append(result_final.iloc[i][0])
                 images.append(result_final.iloc[i][9])
-            return render_template('result.html',books_names=names, search_name=book_name, author_names = authors, rating = rating, isbn = isbn, year= year, recImage = images, book_name=name, book_image = image)
+            return render_template('result.html',books_names=names, search_name=book_name, author_names = authors, rating = rating, year= year, recImage = images, book_name=name, book_image = image)
 
 @app.route('/link_book/<string:book_link>')
 def link_book(book_link):
@@ -120,14 +119,13 @@ def link_book(book_link):
     name = final_book.loc[final_book['original_title'] == book_name, 'original_title'].values[0]
     authors = final_book.loc[final_book['original_title'] == book_name, 'authors'].values[0]
     rating = final_book.loc[final_book['original_title'] == book_name, 'average_rating'].values[0]
-    isbn = final_book.loc[final_book['original_title'] == book_name, 'isbn'].values[0]
     year = final_book.loc[final_book['original_title'] == book_name, 'original_publication_year'].values[0]
     image = final_book.loc[final_book['original_title'] == book_name, 'image_url'].values[0]
     images = []
     for i in range(len(result_final)):
         names.append(result_final.iloc[i][0])
         images.append(result_final.iloc[i][9])
-    return render_template('result.html',books_names=names, search_name=book_name, author_names = authors,rating = rating, isbn = isbn, year= year, recImage = images, book_name=name, book_image = image )
+    return render_template('result.html',books_names=names, search_name=book_name, author_names = authors,rating = rating, year= year, recImage = images, book_name=name, book_image = image )
 
 @app.route('/all_books/<int:page_num>')
 def all_books(page_num):

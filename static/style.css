@@ -191,3 +191,9 @@ p {
   overflow-x: hidden;
   padding-right: 20px;
 }
+#sinopsis {
+  overflow-x: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}

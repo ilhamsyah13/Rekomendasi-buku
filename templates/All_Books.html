@@ -48,14 +48,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('main')}}" method="GET">Home</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('main')}}" method="GET">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('all_books', page_num=1) }}">Daftar Buku</a>
             </li>
           </ul>
           <form class="d-flex" action="{{ url_for('main')}}" method="POST">
-            <input class="form-control me-2" id="search-book" name="search-book" type="search" placeholder="Cari Buku" aria-label="Search" />
+            <input class="form-control me-2" id="search-book" name="search-book" type="search" placeholder="Cari Judul Buku" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>

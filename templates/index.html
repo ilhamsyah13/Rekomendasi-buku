@@ -49,8 +49,9 @@
                   type="search"
                   id="search-book"
                   name="search-book"
-                  placeholder="Cari Buku"
-                  required="required"
+                  placeholder="Cari Judul Buku"
+                  oninvalid="this.setCustomValidity('Isi dengan judul buku')"
+                  oninput="setCustomValidity('')"
                 />
                 <div class="input-group-append">
                   <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
@@ -100,6 +101,7 @@
         });
       });
     </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
       integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"

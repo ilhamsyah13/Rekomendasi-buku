@@ -48,14 +48,14 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{{ url_for('main')}}" method="GET">Home</a>
+              <a class="nav-link active" aria-current="page" href="{{ url_for('main')}}" method="GET">Beranda</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{{ url_for('all_books', page_num=1) }}">Daftar Buku</a>
             </li>
           </ul>
           <form class="d-flex" action="{{ url_for('main')}}" method="POST">
-            <input class="form-control me-2" id="search-book" name="search-book" type="search" placeholder="Cari Buku" aria-label="Search" />
+            <input class="form-control me-2" id="search-book" name="search-book" type="search" placeholder="Cari Judul Buku" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
@@ -70,13 +70,13 @@
         <div class="col-8">
           <p>Judul &emsp;&emsp;&emsp;: {{ book_name }}</p>
           <p>Pengarang &nbsp;&nbsp; : {{ author_names}}</p>
-          <p>ISBN &emsp;&emsp;&emsp; : {{ isbn }}</p>
+          <p>Rating&emsp;&emsp;&emsp;: {{ rating }} / 5</p>
           <p>Tahun&emsp;&emsp;&emsp;: {{ year }}</p>
-          <p>Rating&emsp;&emsp;&emsp;: {{ rating }}</p>
+          <p id="sinopsis">Sinopsis &emsp;&nbsp&nbsp :&nbsp</p>
         </div>
       </div>
     </div>
-    <div class="container result">
+    <div class="container result notranslate">
       <h2>Rekomendasi</h2>
       <div class="row row-cols-2 row-cols-md-5 g-4 book-container">
         {% for i in range (1, 11) %}
@@ -115,6 +115,30 @@
         });
       });
     </script>
+    <script>
+      var settings = {
+        async: true,
+        crossDomain: true,
+        url: "https://www.googleapis.com/books/v1/volumes?q={{ book_name }}",
+        method: "GET",
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+
+        var content = response.items[0].volumeInfo.description;
+        $("#sinopsis").append(content);
+      });
+    </script>
+    <div id="google_translate_element"></div>
+
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({ pageLanguage: "en", includedLanguages: "id" }, "google_translate_element");
+      }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
       integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
