@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, template_folder='templates')
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:''@localhost/drop_duplicate_books'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://etlyftgx:hPyv1Xfs78L0W6b5XkIPRxO3VDCukEuj@queenie.db.elephantsql.com:5432/etlyftgx'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://heddrqgo:oqyVs_BrQq-erErwjso19iQ-lMozCHjw@chunee.db.elephantsql.com:5432/heddrqgo'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
  
 db = SQLAlchemy(app) 
