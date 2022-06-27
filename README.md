@@ -12,5 +12,6 @@ https://www.kaggle.com/datasets/zygmunt/goodbooks-10k
 Website :
 https://rekomendasi-buku.herokuapp.com/
 
+Catatan :
 * First request saat membuka website akan memakan waktu yang cukup lama.
 * Paket yang digunakan pada Heroku adalah gratis maka aplikasi akan dalam keadaan "sleep" jika tidak aktif selama 30 menit. 
