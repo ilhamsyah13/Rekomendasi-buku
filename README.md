@@ -6,6 +6,9 @@ Framework :
 - Flask
 - Bootstrap
 
+API :
+- Google Books (Sinopsis)
+
 Dataset : 
 https://www.kaggle.com/datasets/zygmunt/goodbooks-10k
 
